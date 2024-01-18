@@ -21,6 +21,9 @@ class ViewController: UITableViewController {
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(promptSource))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchFilter))
         
         if let url = URL(string: urlString) {
             if let data = try? Data(contentsOf: url) {
@@ -29,6 +32,36 @@ class ViewController: UITableViewController {
             }
         }
         showError()
+    }
+    
+    @objc func searchFilter() {
+        let ac = UIAlertController(title: "Enter answer", message: nil, preferredStyle: .alert)
+        ac.addTextField()
+        
+        let submitAction = UIAlertAction(title: "Submit", style: .default) {
+            [weak self, weak ac] _ in
+            guard let answer = ac?.textFields?[0].text else { return }
+            self?.submit(answer)
+        }
+        
+        ac.addAction(submitAction)
+        present(ac, animated: true)
+    }
+    
+    func submit(_ answer: String) {
+        var filteredPetition = [Petition]()
+        for petition in petitions {
+            if petition.body.contains(answer) || petition.title.contains(answer) {
+                filteredPetition.append(petition)
+            }
+        }
+        petitions = filteredPetition
+        tableView.reloadData()
+    }
+    
+    @objc func promptSource() {
+        let ac = UIAlertController(title: "Credits", message: "The source is from Web The People API of the Whitehouse", preferredStyle: .alert)
+        present(ac, animated: true)
     }
     
     func showError() {
