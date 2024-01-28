@@ -43,6 +43,7 @@ class ViewController: UICollectionViewController,
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.delegate = self
+        picker.sourceType = .camera
         present(picker, animated: true)
     }
     
@@ -82,6 +83,11 @@ class ViewController: UICollectionViewController,
         })
         
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        ac.addAction(UIAlertAction(title: "Delete", style: .destructive) {
+            [weak self, weak ac] _ in
+            self?.people.remove(at: indexPath.item)
+            self?.collectionView.reloadData()
+        })
         present(ac, animated:true)
     }
 
