@@ -14,6 +14,8 @@
 		F808A8B92B7F259500F3B70E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F808A8B82B7F259500F3B70E /* Preview Assets.xcassets */; };
 		F808A8C02B7F25D400F3B70E /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = F808A8BF2B7F25D400F3B70E /* Destination.swift */; };
 		F808A8C22B7F2BE100F3B70E /* EditDestinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F808A8C12B7F2BE100F3B70E /* EditDestinationView.swift */; };
+		F808A8C42B803F1B00F3B70E /* DestinationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F808A8C32B803F1B00F3B70E /* DestinationListView.swift */; };
+		F808A8C62B80444700F3B70E /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = F808A8C52B80444700F3B70E /* Sight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		F808A8B82B7F259500F3B70E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F808A8BF2B7F25D400F3B70E /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		F808A8C12B7F2BE100F3B70E /* EditDestinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDestinationView.swift; sourceTree = "<group>"; };
+		F808A8C32B803F1B00F3B70E /* DestinationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListView.swift; sourceTree = "<group>"; };
+		F808A8C52B80444700F3B70E /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 			children = (
 				F808A8AF2B7F259400F3B70E /* iTourApp.swift */,
 				F808A8B12B7F259400F3B70E /* ContentView.swift */,
+				F808A8C52B80444700F3B70E /* Sight.swift */,
+				F808A8C32B803F1B00F3B70E /* DestinationListView.swift */,
 				F808A8C12B7F2BE100F3B70E /* EditDestinationView.swift */,
 				F808A8B32B7F259400F3B70E /* Item.swift */,
 				F808A8B52B7F259500F3B70E /* Assets.xcassets */,
@@ -150,7 +156,9 @@
 				F808A8B42B7F259400F3B70E /* Item.swift in Sources */,
 				F808A8C02B7F25D400F3B70E /* Destination.swift in Sources */,
 				F808A8B02B7F259400F3B70E /* iTourApp.swift in Sources */,
+				F808A8C62B80444700F3B70E /* Sight.swift in Sources */,
 				F808A8C22B7F2BE100F3B70E /* EditDestinationView.swift in Sources */,
+				F808A8C42B803F1B00F3B70E /* DestinationListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
